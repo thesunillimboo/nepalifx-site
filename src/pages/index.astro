@@ -1,64 +1,54 @@
 ---
-// This is the "Frontmatter" area (Server-side)
-const agencyName = "NepaliFx";
-const tagline = "Digital Creative Agency: From Nepal to the UK.";
-const year = new Date().getFullYear();
+// NepaliFx Landing Page V2
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<title>{agencyName} | Creative Agency</title>
+		<meta name="generator" content={Astro.generator} />
+		<title>NepaliFx | Modern Digital Agency</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body class="bg-zinc-950 text-zinc-100 font-sans selection:bg-red-500">
-
-		<nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-			<div class="text-2xl font-bold tracking-tighter text-red-500 underline decoration-2 underline-offset-4">
-				{agencyName}
-			</div>
-			<div class="hidden md:flex gap-8 text-sm uppercase tracking-widest opacity-70">
-				<a href="#" class="hover:text-red-500 transition">Work</a>
-				<a href="#" class="hover:text-red-500 transition">Services</a>
-				<a href="#" id="contact-btn" class="hover:text-red-500 transition">Contact</a>
-			</div>
-		</nav>
-
-		<main class="max-w-4xl mx-auto mt-20 px-6 text-center">
-			<h1 class="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-				Designing the Digital Future of Nepal.
-			</h1>
-			<p class="text-xl text-zinc-400 mb-10 leading-relaxed">
-				{tagline} <br/> 
-				We help small businesses build their online presence with UK-standard quality and a local Nepali heart.
-			</p>
+	<body class="bg-slate-950 text-white font-sans selection:bg-red-500 selection:text-white">
+		
+		<main class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
 			
-			<div class="flex flex-wrap justify-center gap-4">
-				<div class="px-6 py-3 bg-red-600 rounded-full font-bold hover:bg-red-700 cursor-pointer transition">
-					Our Services
+			<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[120px] -z-10"></div>
+			<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
+
+			<div class="max-w-3xl text-center space-y-8">
+				
+				<h1 class="text-6xl md:text-8xl font-black tracking-tighter italic">
+					NEPALI<span class="text-red-600 underline decoration-white/20 underline-offset-8">FX</span>
+				</h1>
+
+				<div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+					<span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+					<p class="text-xs font-medium uppercase tracking-[0.2em] text-white/70">Crafting a new digital experience</p>
 				</div>
-				<button id="alert-trigger" class="px-6 py-3 border border-zinc-700 rounded-full font-bold hover:bg-zinc-800 transition text-zinc-300">
-					Learn the Story
-				</button>
+
+				<div class="space-y-4">
+					<h2 class="text-3xl md:text-5xl font-bold text-slate-100">Our website is <br/>currently under construction.</h2>
+					<p class="text-lg text-slate-400 max-w-xl mx-auto">
+						We are building a new home for NepaliFx. We are a modern digital agency focused on visual storytelling and high-performance web solutions.
+					</p>
+				</div>
+
+				<div class="pt-4">
+					<a href="mailto:info@nepalifx.com" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-red-600 hover:text-white transition-all duration-300">
+						Get in touch
+					</a>
+				</div>
+
 			</div>
+
+			<footer class="absolute bottom-8 text-slate-600 text-sm">
+				&copy; {new Date().getFullYear()} NepaliFx. All rights reserved.
+			</footer>
+
 		</main>
-
-		<footer class="mt-40 p-10 border-t border-zinc-900 text-center text-zinc-600 text-sm">
-			&copy; {year} {agencyName}. Built from scratch in the UK.
-		</footer>
-
-		<script>
-			// 1. We find the element on the page
-			const btn = document.getElementById('alert-trigger');
-
-			// 2. We tell the browser to "Listen" for a click
-			btn.addEventListener('click', () => {
-				// 3. This is the "Action"
-				alert("NepaliFx started in Kathmandu and is now evolving in the UK! We are currently building this site live.");
-				console.log("The button was clicked! You just ran JavaScript.");
-			});
-		</script>
 
 	</body>
 </html>
