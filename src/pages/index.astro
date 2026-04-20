@@ -1,0 +1,64 @@
+---
+// This is the "Frontmatter" area (Server-side)
+const agencyName = "NepaliFx";
+const tagline = "Digital Creative Agency: From Nepal to the UK.";
+const year = new Date().getFullYear();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{agencyName} | Creative Agency</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-zinc-950 text-zinc-100 font-sans selection:bg-red-500">
+
+		<nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+			<div class="text-2xl font-bold tracking-tighter text-red-500 underline decoration-2 underline-offset-4">
+				{agencyName}
+			</div>
+			<div class="hidden md:flex gap-8 text-sm uppercase tracking-widest opacity-70">
+				<a href="#" class="hover:text-red-500 transition">Work</a>
+				<a href="#" class="hover:text-red-500 transition">Services</a>
+				<a href="#" id="contact-btn" class="hover:text-red-500 transition">Contact</a>
+			</div>
+		</nav>
+
+		<main class="max-w-4xl mx-auto mt-20 px-6 text-center">
+			<h1 class="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+				Designing the Digital Future of Nepal.
+			</h1>
+			<p class="text-xl text-zinc-400 mb-10 leading-relaxed">
+				{tagline} <br/> 
+				We help small businesses build their online presence with UK-standard quality and a local Nepali heart.
+			</p>
+			
+			<div class="flex flex-wrap justify-center gap-4">
+				<div class="px-6 py-3 bg-red-600 rounded-full font-bold hover:bg-red-700 cursor-pointer transition">
+					Our Services
+				</div>
+				<button id="alert-trigger" class="px-6 py-3 border border-zinc-700 rounded-full font-bold hover:bg-zinc-800 transition text-zinc-300">
+					Learn the Story
+				</button>
+			</div>
+		</main>
+
+		<footer class="mt-40 p-10 border-t border-zinc-900 text-center text-zinc-600 text-sm">
+			&copy; {year} {agencyName}. Built from scratch in the UK.
+		</footer>
+
+		<script>
+			// 1. We find the element on the page
+			const btn = document.getElementById('alert-trigger');
+
+			// 2. We tell the browser to "Listen" for a click
+			btn.addEventListener('click', () => {
+				// 3. This is the "Action"
+				alert("NepaliFx started in Kathmandu and is now evolving in the UK! We are currently building this site live.");
+				console.log("The button was clicked! You just ran JavaScript.");
+			});
+		</script>
+
+	</body>
+</html>
