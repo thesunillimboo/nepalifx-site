@@ -1,55 +1,73 @@
 ---
-import '../styles/global.css'; // Add this line if Astro created the file
-// NepaliFx Landing Page V2
+import '../styles/global.css';
+// NepaliFx Landing Page V2 - Digital Agency Edition
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>NepaliFx | Modern Digital Agency</title>
-		
-	</head>
-	<body class="bg-slate-950 text-white font-sans selection:bg-red-500 selection:text-white">
-		
-		<main class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
-			
-			<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[120px] -z-10"></div>
-			<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>NepaliFx | Modern Digital Agency</title>
+  </head>
+  <body class="bg-slate-950 text-white font-sans selection:bg-red-500 selection:text-white">
+    
+    <main class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+      
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[120px] -z-10"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
 
-			<div class="max-w-3xl text-center space-y-8">
-				
-				<h1 class="text-6xl md:text-8xl font-black tracking-tighter italic">
-					NEPALI<span class="text-red-600 underline decoration-white/20 underline-offset-8">FX</span>
-				</h1>
+      <div class="max-w-3xl text-center space-y-8">
+        
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter italic">
+          NEPALI<span class="text-red-600 underline decoration-white/20 underline-offset-8">FX</span>
+        </h1>
 
-				<div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
-					<span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-					<p class="text-xs font-medium uppercase tracking-[0.2em] text-white/70">Crafting a new digital experience</p>
-				</div>
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+          <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+          <p class="text-xs font-medium uppercase tracking-[0.2em] text-white/70">Crafting a new digital experience</p>
+        </div>
 
-				<div class="space-y-4">
-					<h2 class="text-3xl md:text-5xl font-bold text-slate-100">Our website is <br/>currently under construction.</h2>
-					<p class="text-lg text-slate-400 max-w-xl mx-auto">
-						We are building a new home for NepaliFx. We are a modern digital agency focused on visual storytelling and high-performance web solutions.
-					</p>
-				</div>
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-5xl font-bold text-slate-100">Our website is <br/>currently under construction.</h2>
+          <p class="text-lg text-slate-400 max-w-xl mx-auto">
+            We are building a new home for NepaliFx. We are a modern digital agency focused on visual storytelling and high-performance web solutions.
+          </p>
+        </div>
 
-				<div class="pt-4">
-					<a href="mailto:info@nepalifx.com" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-red-600 hover:text-white transition-all duration-300">
-						Get in touch
-					</a>
-				</div>
+        <div class="pt-4 flex flex-col items-center space-y-12">
+          
+          <a href="mailto:info@nepalifx.com" class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-red-600 hover:text-white transition-all duration-300 shadow-xl shadow-red-600/10 hover:shadow-red-600/30">
+            Get in touch
+          </a>
 
-			</div>
+          <div class="flex gap-8 justify-center items-center">
+            <a href="https://facebook.com/nepalifx" target="_blank" class="group flex flex-col items-center">
+              <span class="text-xs uppercase tracking-[0.2em] text-slate-500 group-hover:text-red-500 transition-colors duration-300">Facebook</span>
+              <div class="h-[1px] w-0 bg-red-600 group-hover:w-full transition-all duration-300 mt-1"></div>
+            </a>
 
-			<footer class="absolute bottom-8 text-slate-600 text-sm">
-				&copy; {new Date().getFullYear()} NepaliFx. All rights reserved.
-			</footer>
+            <a href="https://instagram.com/nepalifx" target="_blank" class="group flex flex-col items-center">
+              <span class="text-xs uppercase tracking-[0.2em] text-slate-500 group-hover:text-red-500 transition-colors duration-300">Instagram</span>
+              <div class="h-[1px] w-0 bg-red-600 group-hover:w-full transition-all duration-300 mt-1"></div>
+            </a>
 
-		</main>
+            <a href="https://youtube.com/@nepalifx" target="_blank" class="group flex flex-col items-center">
+              <span class="text-xs uppercase tracking-[0.2em] text-slate-500 group-hover:text-red-500 transition-colors duration-300">YouTube</span>
+              <div class="h-[1px] w-0 bg-red-600 group-hover:w-full transition-all duration-300 mt-1"></div>
+            </a>
+          </div>
+          
+        </div>
 
-	</body>
+      </div>
+
+      <footer class="absolute bottom-8 text-slate-700 text-xs tracking-widest uppercase">
+        &copy; {new Date().getFullYear()} NepaliFx Agency. Powered by Innovation.
+      </footer>
+
+    </main>
+
+  </body>
 </html>
